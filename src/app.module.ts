@@ -6,9 +6,9 @@ import { AuthController } from './auth/auth.controller';
 import { AuthService } from './auth/auth.service';
 import { UsersService } from './users/user.service';
 import { User, UserSchema } from './users/user.schema';
-import { TodosController } from './users copy/todo.controller';
-import { TodosService } from './users copy/todo.service';
-import { Todo, TodoSchema } from './users copy/todo.schema';
+import { TodosController } from './todo/todo.controller';
+import { TodosService } from './todo/todo.service';
+import { Todo, TodoSchema } from './todo/todo.schema';
 
 @Module({
   imports: [
