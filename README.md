@@ -1,24 +1,22 @@
-<p align="center">
-  <a href="https://nestjs.com/" target="_blank">
-    <img src="https://nestjs.com/img/logo-small.svg" width="120" alt="NestJS Logo" />
-  </a>
-</p>
+# Todo API — Production-ready REST API with JWT Auth & Swagger
 
-# NestJS Todo API with Swagger
-
-[![NPM Version](https://img.shields.io/npm/v/@nestjs/core.svg)](https://www.npmjs.com/package/@nestjs/core)
-[![License](https://img.shields.io/npm/l/@nestjs/core.svg)](https://github.com/nestjs/nest/blob/master/LICENSE)
-[![NPM Downloads](https://img.shields.io/npm/dm/@nestjs/common.svg)](https://www.npmjs.com/package/@nestjs/common)
-[![Discord](https://img.shields.io/badge/discord-online-brightgreen.svg)](https://discord.gg/G7Qnnhy)
-
----
+![CI](https://github.com/AliKhanmo/simple-todo-project/actions/workflows/ci.yml/badge.svg)
 
 ## Description
 
-This is a simple Todo REST API project built with NestJS(https://nestjs.com/) and MongoDB (via Mongoose).  
-It supports user authentication with JWT and API documentation with Swagger.
+A production-ready backend API for managing personal todo lists.
+Built with NestJS and MongoDB, featuring JWT authentication,
+ownership-based access control, Swagger documentation,
+9 unit tests, and automated CI with GitHub Actions.
 
----
+## Tech Stack
+
+- NestJS + TypeScript
+- MongoDB + Mongoose
+- JWT Authentication (Passport.js)
+- Swagger / OpenAPI
+- Jest (9 unit tests)
+- GitHub Actions CI
 
 ## Features
 
@@ -26,16 +24,25 @@ It supports user authentication with JWT and API documentation with Swagger.
 - CRUD operations for Todos linked to authenticated users
 - Swagger UI for interactive API documentation and testing
 - Environment variables for configuration (MongoDB connection, JWT secret, etc.)
+- 9 unit tests covering auth and todo services
+- Automated CI pipeline via GitHub Actions
 
----
+## API Endpoints
+
+POST /api/auth/register — Register a new user
+POST /api/auth/login — Login and receive JWT token
+GET /api/todos — Get all todos for authenticated user
+POST /api/todos — Create a new todo
+PATCH /api/todos/:id — Update a todo by ID
+DELETE /api/todos/:id — Delete a todo by ID
 
 ## Getting Started
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/en/) >= 16.x
+- [Node.js](https://nodejs.org/en/) >= 20.x
 - [MongoDB](https://www.mongodb.com/) installed and running locally or remotely
-- npm 
+- npm
 
 ---
 
@@ -54,12 +61,8 @@ npm run start:dev
 # API Documentation
 http://localhost:3000/api-docs
 
-# Folder Structure
-src/
-├── auth/
-├── todos/
-├── users/
-├── app.module.ts
-└── main.ts
-
-
+## Environment Variables
+PORT=
+MONGODB_URI=
+JWT_SECRET=
+```
